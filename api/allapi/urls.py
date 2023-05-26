@@ -1,7 +1,12 @@
-from django.contrib import admin
-from django.urls import path
-from .views import data
+from .views.login import LoginAPI
+from .views.register import RegisterAPI
+from .views.otpverify import VerifyOTP
+
+from django.urls import path, include
+# from django.urls import include, re_path
 
 urlpatterns = [
-    path('', data, name="data")
+    path('register/', RegisterAPI.as_view(), name='register'),
+    path('verify/', VerifyOTP.as_view(), name='Verify'),
+    path('login/', LoginAPI.as_view(), name='login'),
 ]
