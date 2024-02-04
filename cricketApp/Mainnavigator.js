@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect, useState } from 'react';
+import AppScreen from './screen/AppScreen';
 import Home from './screen/Home';
 import Login from './screen/Login';
 import Profile from './screen/Profile';
@@ -32,6 +33,7 @@ const MainNavigator = () => {
           </>
         ) : (
           <>
+           <Stack.Screen name="AppPage"  component={AppScreen} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="SignUp" component={SignUp} />
           </>
