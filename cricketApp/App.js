@@ -1,12 +1,13 @@
 import React from "react";
 import { StyleSheet } from 'react-native';
-import Mainnavigator from './mainnavigator';
+import MainNavigator from "./MainNavigator";
+
 
 export default function App() {
   return (
     <>
       
-      <Mainnavigator />
+     <MainNavigator/>
       
     </>
   );
